@@ -1,0 +1,40 @@
+### Create a new Movie (title, releaseDate, genre, rating, price)
+POST https://dmit2015-demo-7eeb2-default-rtdb.firebaseio.com/movies.json
+Content-Type: application/json
+
+{
+  "title": "Dune",
+  "releaseDate": "2022-03-30",
+  "genre": "Action",
+  "rating": "PG-13",
+  "price": 19.99
+}
+
+### Get All Movies
+GET https://dmit2015-demo-7eeb2-default-rtdb.firebaseio.com/movies.json
+
+### Get One Movie by Key
+GET https://dmit2015-demo-7eeb2-default-rtdb.firebaseio.com/movies/-MzXb_wjcfcm3hKt_GYX.json
+
+### Update a Movie and change price to 19.98 and genre to action for movie with key -MzXb_wjcfcm3hKt_GYX
+PUT https://dmit2015-demo-7eeb2-default-rtdb.firebaseio.com/movies/-MzXb_wjcfcm3hKt_GYX.json
+Content-Type: application/json
+
+{
+  "title": "Turning Red",
+  "releaseDate": "2022-02-21",
+  "genre": "Action",
+  "rating": "PG",
+  "price": 19.98
+}
+
+### PATCH Movie and change 'only' the release date to 2021-10-22 for movie with key -MzXbCDIKw6CnMXR7cXu
+PATCH https://dmit2015-demo-7eeb2-default-rtdb.firebaseio.com/movies/-MzXbCDIKw6CnMXR7cXu.json
+Content-Type: application/json
+
+{
+  "releaseDate": "2021-02-21"
+}
+
+### DELETE a Movie
+DELETE https://dmit2015-demo-7eeb2-default-rtdb.firebaseio.com/movies/-MzXbCDIKw6CnMXR7cXu.json
